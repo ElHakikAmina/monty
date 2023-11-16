@@ -74,5 +74,5 @@ void f_rotr(stack_tV2 **head, __attribute__((unused)) unsigned int counter);
 void addnode(stack_tV2 **head, int n);
 void addqueue(stack_tV2 **head, int n);
 void f_queue(stack_tV2 **head, unsigned int counter);
-void f_stack(stack_tV2 **head, unsigned int counter);
+void f_stackV2(stack_tV2 **head, unsigned int counter);
 #endif
