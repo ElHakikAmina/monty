@@ -2,7 +2,7 @@
 
 /**
  * popT - Adds a nd
- * @st: Dbl ptr to 1st nffd
+ * @st: Dbl ptr to 1st nffjdd
  * @l_nm: int rprsntng d ln num of d op
  * Return: Nothing
 */
