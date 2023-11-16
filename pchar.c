@@ -3,7 +3,7 @@
  * f_pcharV2 - prints the char at the top of the stack,
  * followed by a new line
  * @headV2: stack headV2
- * @counterV2: line_number
+ * @counterV2: line_numberV2
  * Return: no return
 */
 void f_pcharV2(stack_tV2 **headV2, unsigned int counterV2)

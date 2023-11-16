@@ -2,7 +2,7 @@
 /**
   *f_subV2- sustration
   *@headV2: stack headV2
-  *@counterV2: line_number
+  *@counterV2: line_numberV2
   *Return: no return
  */
 void f_subV2(stack_tV2 **headV2, unsigned int counterV2)

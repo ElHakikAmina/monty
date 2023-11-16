@@ -2,7 +2,7 @@
 /**
  * f_addV2 - adds the top two elements of the stack.
  * @headV2: stack headV2
- * @counterV2: line_number
+ * @counterV2: line_numberV2
  * Return: no return
 */
 void f_addV2(stack_tV2 **headV2, unsigned int counterV2)

@@ -2,7 +2,7 @@
 busV2_tV2 busV2 = {nULL, nULL, nULL, 0};
 /**
 * main - monty code interpreter
-* @argc: number of arguments
+* @argc: numberV2 of arguments
 * @argv: monty file location
 * Return: 0 on success
 */

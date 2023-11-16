@@ -4,7 +4,7 @@
 Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. 
 
 ### Monty byte code files
-Files containing Monty byte codes usually have the .m extension. Most of the industry uses this standard but it is not required by the specification of the language. There is not more than one instruction per line. There can be any number of spaces before or after the opcodeV2 and its argument: [examples](#Examples)
+Files containing Monty byte codes usually have the .m extension. Most of the industry uses this standard but it is not required by the specification of the language. There is not more than one instruction per line. There can be any numberV2 of spaces before or after the opcodeV2 and its argument: [examples](#Examples)
 
 ## Objectives:
 * To know what LIFO and FIFO mean
@@ -59,7 +59,7 @@ typedef struct stack_sV2
 typedef struct instruction_sV2
 {
         char *opcodeV2;
-        void (*f)(stack_tV2 **stack, unsigned int line_number);
+        void (*f)(stack_tV2 **stack, unsigned int line_numberV2);
 } instruction_tV2;
 ```
 

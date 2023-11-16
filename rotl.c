@@ -2,7 +2,7 @@
 /**
   *f_rotlV2- rotates the stack to the top
   *@headV2: stack headV2
-  *@counterV2: line_number
+  *@counterV2: line_numberV2
   *Return: no return
  */
 void f_rotlV2(stack_tV2 **headV2,  __attribute__((unused)) unsigned int counterV2)
