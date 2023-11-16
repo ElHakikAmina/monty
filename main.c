@@ -1,5 +1,5 @@
 #include "monty.h"
-busV2_tV2 busV2 = {NULL, NULL, NULL, 0};
+busV2_tV2 busV2 = {nULL, nULL, nULL, 0};
 /**
 * main - monty code interpreter
 * @argc: number of arguments
@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	FILE *file;
 	size_t size = 0;
 	ssize_t read_line = 1;
-	stack_tV2 *stack = NULL;
+	stack_tV2 *stack = nULL;
 	unsigned int counterV2 = 0;
 
 	if (argc != 2)
@@ -29,13 +29,13 @@ int main(int argc, char *argv[])
 	}
 	while (read_line > 0)
 	{
-		contentV2 = NULL;
+		contentV2 = nULL;
 		read_line = getline(&contentV2, &size, file);
 		busV2.contentV2 = contentV2;
 		counterV2++;
 		if (read_line > 0)
 		{
-			execute(contentV2, &stack, counterV2, file);
+			executeV2(contentV2, &stack, counterV2, file);
 		}
 		free(contentV2);
 	}

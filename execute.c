@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
-* execute - executes the opcode
+* executeV2 - executeV2s the opcodeV2
 * @stack: headV2 linked list - stack
 * @counterV2: line_counterV2
 * @file: poiner to monty file
 * @contentV2: line contentV2
 * Return: no return
 */
-int execute(char *contentV2, stack_tV2 **stack, unsigned int counterV2, FILE *file)
+int executeV2(char *contentV2, stack_tV2 **stack, unsigned int counterV2, FILE *file)
 {
 	instruction_tV2 opst[] = {
 				{"push", f_pushV2}, {"pall", f_pallV2}, {"pint", f_pintV2},
@@ -25,7 +25,7 @@ int execute(char *contentV2, stack_tV2 **stack, unsigned int counterV2, FILE *fi
 				{"rotr", f_rotrV2},
 				{"queue", f_queueV2},
 				{"stack", f_stackV2},
-				{NULL, NULL}
+				{nULL, nULL}
 				};
 	unsigned int i = 0;
 	char *op;
@@ -33,16 +33,16 @@ int execute(char *contentV2, stack_tV2 **stack, unsigned int counterV2, FILE *fi
 	op = strtok(contentV2, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	busV2.arg = strtok(NULL, " \n\t");
-	while (opst[i].opcode && op)
+	busV2.arg = strtok(nULL, " \n\t");
+	while (opst[i].opcodeV2 && op)
 	{
-		if (strcmp(op, opst[i].opcode) == 0)
+		if (strcmp(op, opst[i].opcodeV2) == 0)
 		{	opst[i].f(stack, counterV2);
 			return (0);
 		}
 		i++;
 	}
-	if (op && opst[i].opcode == NULL)
+	if (op && opst[i].opcodeV2 == nULL)
 	{ fprintf(stderr, "L%d: unknown instruction %s\n", counterV2, op);
 		fclose(file);
 		free(contentV2);

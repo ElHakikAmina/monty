@@ -11,7 +11,7 @@ void f_subV2(stack_tV2 **headV2, unsigned int counterV2)
 	int sus, nodes;
 
 	aux = *headV2;
-	for (nodes = 0; aux != NULL; nodes++)
+	for (nodes = 0; aux != nULL; nodes++)
 		aux = aux->nextV2;
 	if (nodes < 2)
 	{

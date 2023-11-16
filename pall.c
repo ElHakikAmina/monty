@@ -11,7 +11,7 @@ void f_pallV2(stack_tV2 **headV2, unsigned int counterV2)
 	(void)counterV2;
 
 	h = *headV2;
-	if (h == NULL)
+	if (h == nULL)
 		return;
 	while (h)
 	{

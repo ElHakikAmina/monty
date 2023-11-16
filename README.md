@@ -1,10 +1,10 @@
 # 0x19. C - Stacks, Queues - LIFO, FIFO
-**About:** In this project, we created a simple interpreter for Monty ByteCodes. The interpreter reads a bytecode file and executes the bytecode commands.
+**About:** In this project, we created a simple interpreter for Monty ByteCodes. The interpreter reads a bytecode file and executeV2s the bytecode commands.
 ### The Monty language
 Monty 0.98 is a scripting language that is first compiled into Monty byte codes (Just like Python). It relies on a unique stack, with specific instructions to manipulate it. 
 
 ### Monty byte code files
-Files containing Monty byte codes usually have the .m extension. Most of the industry uses this standard but it is not required by the specification of the language. There is not more than one instruction per line. There can be any number of spaces before or after the opcode and its argument: [examples](#Examples)
+Files containing Monty byte codes usually have the .m extension. Most of the industry uses this standard but it is not required by the specification of the language. There is not more than one instruction per line. There can be any number of spaces before or after the opcodeV2 and its argument: [examples](#Examples)
 
 ## Objectives:
 * To know what LIFO and FIFO mean
@@ -23,7 +23,7 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 * All files ends with a new line
 * There is **README.md** file at the root of the **alx-low_level_programming**
 * Maximum of one global variable is allowed
-* No more than 5 functions per file
+* no more than 5 functions per file
 * The C standard library is allowed
 * The prototypes of all the functions were included in the headV2er file called monty.h
 * All the headV2er files are include guarded
@@ -49,22 +49,22 @@ typedef struct stack_sV2
 ```
 ```
 /**
- * struct instruction_sV2 - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
+ * struct instruction_sV2 - opcodeV2 and its function
+ * @opcodeV2: the opcodeV2
+ * @f: function to handle the opcodeV2
  *
- * Description: opcode and its function
+ * Description: opcodeV2 and its function
  * for stack, queues, LIFO, FIFO
  */
 typedef struct instruction_sV2
 {
-        char *opcode;
+        char *opcodeV2;
         void (*f)(stack_tV2 **stack, unsigned int line_number);
 } instruction_tV2;
 ```
 
 ## List of files/Descriptions:
-| S/N   |   Files      		|      Description     |
+| S/n   |   Files      		|      Description     |
 |:-----:|--------------------:|--------------------|
 |  1.   |                      |              |
 |  2.   |		|			|
@@ -91,7 +91,7 @@ push 4$
 pall$
 julien@ubuntu:~/monty$
 ```
-Monty byte code files can contain blank lines (empty or made of spaces only, and any additional text after the opcode or its required argument is not taken into account:
+Monty byte code files can contain blank lines (empty or made of spaces only, and any additional text after the opcodeV2 or its required argument is not taken into account:
 ```
 julien@ubuntu:~/monty$ cat -e bytecodes/001.m
 push 0 Push 0 onto the stack$

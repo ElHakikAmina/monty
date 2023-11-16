@@ -1,5 +1,5 @@
-#ifndef MONTY_H
-#define MONTY_H
+#ifndef MOnTY_H
+#define MOnTY_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -39,16 +39,16 @@ typedef struct busV2_sV2
 }  busV2_tV2;
 extern busV2_tV2 busV2;
 /**
- * struct instruction_sV2 - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
+ * struct instruction_sV2 - opcodeV2 and its function
+ * @opcodeV2: the opcodeV2
+ * @f: function to handle the opcodeV2
  *
- * Description: opcode and its function
+ * Description: opcodeV2 and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
 typedef struct instruction_sV2
 {
-	char *opcode;
+	char *opcodeV2;
 	void (*f)(stack_tV2 **stack, unsigned int line_number);
 } instruction_tV2;
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
@@ -57,7 +57,7 @@ char  *clean_line(char *contentV2);
 void f_pushV2(stack_tV2 **headV2, unsigned int number);
 void f_pallV2(stack_tV2 **headV2, unsigned int number);
 void f_pintV2(stack_tV2 **headV2, unsigned int number);
-int execute(char *contentV2, stack_tV2 **headV2, unsigned int counterV2, FILE *file);
+int executeV2(char *contentV2, stack_tV2 **headV2, unsigned int counterV2, FILE *file);
 void free_stackV2(stack_tV2 *headV2);
 void f_popV2(stack_tV2 **headV2, unsigned int counterV2);
 void f_swapV2(stack_tV2 **headV2, unsigned int counterV2);

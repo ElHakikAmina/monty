@@ -12,13 +12,13 @@ void addnodeV2(stack_tV2 **headV2, int n)
 
 	aux = *headV2;
 	new_node = malloc(sizeof(stack_tV2));
-	if (new_node == NULL)
+	if (new_node == nULL)
 	{ printf("Error\n");
 		exit(0); }
 	if (aux)
 		aux->prevV2 = new_node;
 	new_node->n = n;
 	new_node->nextV2 = *headV2;
-	new_node->prevV2 = NULL;
+	new_node->prevV2 = nULL;
 	*headV2 = new_node;
 }
