@@ -3,7 +3,7 @@
 /**
  * popT - Adds a nd
  * @st: Dbl ptr to 1st nffd
- jd* @l_nm: int rprsntng d ln num of d op
+ jjd* @l_nm: int rprsntng d ln num of d op
  *
  * Return: Nothing
 */
