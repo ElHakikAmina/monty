@@ -13,7 +13,7 @@ int execute(char *contentV2, stack_tV2 **stack, unsigned int counter, FILE *file
 				{"push", f_push}, {"pall", f_pall}, {"pint", f_pint},
 				{"pop", f_pop},
 				{"swap", f_swap},
-				{"add", f_add},
+				{"add", f_addV2},
 				{"nop", f_nopV2},
 				{"sub", f_subV2},
 				{"div", f_divV2},
