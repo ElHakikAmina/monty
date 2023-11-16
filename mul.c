@@ -2,10 +2,10 @@
 /**
  * f_mulV2 - multiplies the top two elements of the stack.
  * @head: stack head
- * @counter: line_number
+ * @counterV2: line_number
  * Return: no return
 */
-void f_mulV2(stack_tV2 **head, unsigned int counter)
+void f_mulV2(stack_tV2 **head, unsigned int counterV2)
 {
 	stack_tV2 *h;
 	int len = 0, aux;
@@ -18,7 +18,7 @@ void f_mulV2(stack_tV2 **head, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", counterV2);
 		fclose(busV2.file);
 		free(busV2.contentV2);
 		free_stackV2(*head);

@@ -2,10 +2,10 @@
 /**
  * f_pushV2 - add node to the stack
  * @head: stack head
- * @counter: line_number
+ * @counterV2: line_number
  * Return: no return
 */
-void f_pushV2(stack_tV2 **head, unsigned int counter)
+void f_pushV2(stack_tV2 **head, unsigned int counterV2)
 {
 	int n, j = 0, flag = 0;
 
@@ -18,13 +18,13 @@ void f_pushV2(stack_tV2 **head, unsigned int counter)
 			if (busV2.arg[j] > 57 || busV2.arg[j] < 48)
 				flag = 1; }
 		if (flag == 1)
-		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+		{ fprintf(stderr, "L%d: usage: push integer\n", counterV2);
 			fclose(busV2.file);
 			free(busV2.contentV2);
 			free_stackV2(*head);
 			exit(EXIT_FAILURE); }}
 	else
-	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+	{ fprintf(stderr, "L%d: usage: push integer\n", counterV2);
 		fclose(busV2.file);
 		free(busV2.contentV2);
 		free_stackV2(*head);

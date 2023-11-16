@@ -2,13 +2,13 @@
 /**
  * f_pallV2 - prints the stack
  * @head: stack head
- * @counter: no used
+ * @counterV2: no used
  * Return: no return
 */
-void f_pallV2(stack_tV2 **head, unsigned int counter)
+void f_pallV2(stack_tV2 **head, unsigned int counterV2)
 {
 	stack_tV2 *h;
-	(void)counter;
+	(void)counterV2;
 
 	h = *head;
 	if (h == NULL)
