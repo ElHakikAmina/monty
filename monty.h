@@ -11,7 +11,7 @@
  * struct stack_sV2 - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prevV2: points to the prevV2ious element of the stack (or queue)
- * @next: points to the next element of the stack (or queue)
+ * @nextV2: points to the nextV2 element of the stack (or queue)
  *
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO Holberton project
@@ -20,7 +20,7 @@ typedef struct stack_sV2
 {
 	int n;
 	struct stack_sV2 *prevV2;
-	struct stack_sV2 *next;
+	struct stack_sV2 *nextV2;
 } stack_tV2;
 /**
  * struct busV2_sV2 - variables -args, file, line contentV2

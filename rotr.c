@@ -10,16 +10,16 @@ void f_rotr(stack_tV2 **head, __attribute__((unused)) unsigned int counter)
 	stack_tV2 *copy;
 
 	copy = *head;
-	if (*head == NULL || (*head)->next == NULL)
+	if (*head == NULL || (*head)->nextV2 == NULL)
 	{
 		return;
 	}
-	while (copy->next)
+	while (copy->nextV2)
 	{
-		copy = copy->next;
+		copy = copy->nextV2;
 	}
-	copy->next = *head;
-	copy->prevV2->next = NULL;
+	copy->nextV2 = *head;
+	copy->prevV2->nextV2 = NULL;
 	copy->prevV2 = NULL;
 	(*head)->prevV2 = copy;
 	(*head) = copy;

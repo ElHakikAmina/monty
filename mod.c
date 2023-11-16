@@ -14,7 +14,7 @@ void f_mod(stack_tV2 **head, unsigned int counter)
 	h = *head;
 	while (h)
 	{
-		h = h->next;
+		h = h->nextV2;
 		len++;
 	}
 	if (len < 2)
@@ -34,8 +34,8 @@ void f_mod(stack_tV2 **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	aux = h->next->n % h->n;
-	h->next->n = aux;
-	*head = h->next;
+	aux = h->nextV2->n % h->n;
+	h->nextV2->n = aux;
+	*head = h->nextV2;
 	free(h);
 }

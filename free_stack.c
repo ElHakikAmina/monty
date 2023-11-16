@@ -10,7 +10,7 @@ void free_stack(stack_tV2 *head)
 	aux = head;
 	while (head)
 	{
-		aux = head->next;
+		aux = head->nextV2;
 		free(head);
 		head = aux;
 	}

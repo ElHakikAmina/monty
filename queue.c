@@ -29,11 +29,11 @@ void addqueue(stack_tV2 **head, int n)
 		printf("Error\n");
 	}
 	new_node->n = n;
-	new_node->next = NULL;
+	new_node->nextV2 = NULL;
 	if (aux)
 	{
-		while (aux->next)
-			aux = aux->next;
+		while (aux->nextV2)
+			aux = aux->nextV2;
 	}
 	if (!aux)
 	{
@@ -42,7 +42,7 @@ void addqueue(stack_tV2 **head, int n)
 	}
 	else
 	{
-		aux->next = new_node;
+		aux->nextV2 = new_node;
 		new_node->prevV2 = aux;
 	}
 }

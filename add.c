@@ -13,7 +13,7 @@ void f_add(stack_tV2 **head, unsigned int counter)
 	h = *head;
 	while (h)
 	{
-		h = h->next;
+		h = h->nextV2;
 		len++;
 	}
 	if (len < 2)
@@ -25,8 +25,8 @@ void f_add(stack_tV2 **head, unsigned int counter)
 		exit(EXIT_FAILURE);
 	}
 	h = *head;
-	aux = h->n + h->next->n;
-	h->next->n = aux;
-	*head = h->next;
+	aux = h->n + h->nextV2->n;
+	h->nextV2->n = aux;
+	*head = h->nextV2;
 	free(h);
 }

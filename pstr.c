@@ -19,7 +19,7 @@ void f_pstr(stack_tV2 **head, unsigned int counter)
 			break;
 		}
 		printf("%c", h->n);
-		h = h->next;
+		h = h->nextV2;
 	}
 	printf("\n");
 }

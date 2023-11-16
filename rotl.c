@@ -9,18 +9,18 @@ void f_rotl(stack_tV2 **head,  __attribute__((unused)) unsigned int counter)
 {
 	stack_tV2 *tmp = *head, *aux;
 
-	if (*head == NULL || (*head)->next == NULL)
+	if (*head == NULL || (*head)->nextV2 == NULL)
 	{
 		return;
 	}
-	aux = (*head)->next;
+	aux = (*head)->nextV2;
 	aux->prevV2 = NULL;
-	while (tmp->next != NULL)
+	while (tmp->nextV2 != NULL)
 	{
-		tmp = tmp->next;
+		tmp = tmp->nextV2;
 	}
-	tmp->next = *head;
-	(*head)->next = NULL;
+	tmp->nextV2 = *head;
+	(*head)->nextV2 = NULL;
 	(*head)->prevV2 = tmp;
 	(*head) = aux;
 }

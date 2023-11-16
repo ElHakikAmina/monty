@@ -13,7 +13,7 @@ void f_swap(stack_tV2 **head, unsigned int counter)
 	h = *head;
 	while (h)
 	{
-		h = h->next;
+		h = h->nextV2;
 		len++;
 	}
 	if (len < 2)
@@ -26,6 +26,6 @@ void f_swap(stack_tV2 **head, unsigned int counter)
 	}
 	h = *head;
 	aux = h->n;
-	h->n = h->next->n;
-	h->next->n = aux;
+	h->n = h->nextV2->n;
+	h->nextV2->n = aux;
 }
