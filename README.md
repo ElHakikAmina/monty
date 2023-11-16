@@ -32,7 +32,7 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 * To use the following data structures for this project, and to also include them in the header file.
 ```
 /**
- * struct stack_s - doubly linked list representation of a stack (or queue)
+ * struct stack_sV2 - doubly linked list representation of a stack (or queue)
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
@@ -40,11 +40,11 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
-typedef struct stack_s
+typedef struct stack_sV2
 {
         int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+        struct stack_sV2 *prev;
+        struct stack_sV2 *next;
 } stack_t;
 ```
 ```
