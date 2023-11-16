@@ -9,28 +9,28 @@ void f_push(stack_tV2 **head, unsigned int counter)
 {
 	int n, j = 0, flag = 0;
 
-	if (bus.arg)
+	if (busV2.arg)
 	{
-		if (bus.arg[0] == '-')
+		if (busV2.arg[0] == '-')
 			j++;
-		for (; bus.arg[j] != '\0'; j++)
+		for (; busV2.arg[j] != '\0'; j++)
 		{
-			if (bus.arg[j] > 57 || bus.arg[j] < 48)
+			if (busV2.arg[j] > 57 || busV2.arg[j] < 48)
 				flag = 1; }
 		if (flag == 1)
 		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
-			fclose(bus.file);
-			free(bus.contentV2);
+			fclose(busV2.file);
+			free(busV2.contentV2);
 			free_stack(*head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
-		fclose(bus.file);
-		free(bus.contentV2);
+		fclose(busV2.file);
+		free(busV2.contentV2);
 		free_stack(*head);
 		exit(EXIT_FAILURE); }
-	n = atoi(bus.arg);
-	if (bus.lifi == 0)
+	n = atoi(busV2.arg);
+	if (busV2.lifi == 0)
 		addnode(head, n);
 	else
 		addqueue(head, n);

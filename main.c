@@ -1,5 +1,5 @@
 #include "monty.h"
-bus_tV2 bus = {NULL, NULL, NULL, 0};
+busV2_tV2 busV2 = {NULL, NULL, NULL, 0};
 /**
 * main - monty code interpreter
 * @argc: number of arguments
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
-	bus.file = file;
+	busV2.file = file;
 	if (!file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	{
 		contentV2 = NULL;
 		read_line = getline(&contentV2, &size, file);
-		bus.contentV2 = contentV2;
+		busV2.contentV2 = contentV2;
 		counter++;
 		if (read_line > 0)
 		{

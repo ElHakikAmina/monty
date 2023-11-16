@@ -9,5 +9,5 @@ void f_stack(stack_tV2 **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;
-	bus.lifi = 0;
+	busV2.lifi = 0;
 }

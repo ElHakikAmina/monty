@@ -10,8 +10,8 @@ void f_pint(stack_tV2 **head, unsigned int counter)
 	if (*head == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", counter);
-		fclose(bus.file);
-		free(bus.contentV2);
+		fclose(busV2.file);
+		free(busV2.contentV2);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

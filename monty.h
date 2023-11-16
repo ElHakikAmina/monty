@@ -23,21 +23,21 @@ typedef struct stack_sV2
 	struct stack_sV2 *next;
 } stack_tV2;
 /**
- * struct bus_sV2 - variables -args, file, line contentV2
+ * struct busV2_sV2 - variables -args, file, line contentV2
  * @arg: value
  * @file: pointer to monty file
  * @contentV2: line contentV2
  * @lifi: flag change stack <-> queue
  * Description: carries values through the program
  */
-typedef struct bus_sV2
+typedef struct busV2_sV2
 {
 	char *arg;
 	FILE *file;
 	char *contentV2;
 	int lifi;
-}  bus_tV2;
-extern bus_tV2 bus;
+}  busV2_tV2;
+extern busV2_tV2 busV2;
 /**
  * struct instruction_sV2 - opcode and its function
  * @opcode: the opcode

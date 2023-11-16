@@ -20,8 +20,8 @@ void f_mod(stack_tV2 **head, unsigned int counter)
 	if (len < 2)
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
-		fclose(bus.file);
-		free(bus.contentV2);
+		fclose(busV2.file);
+		free(busV2.contentV2);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
@@ -29,8 +29,8 @@ void f_mod(stack_tV2 **head, unsigned int counter)
 	if (h->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", counter);
-		fclose(bus.file);
-		free(bus.contentV2);
+		fclose(busV2.file);
+		free(busV2.contentV2);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

@@ -12,8 +12,8 @@ void f_pop(stack_tV2 **head, unsigned int counter)
 	if (*head == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", counter);
-		fclose(bus.file);
-		free(bus.contentV2);
+		fclose(busV2.file);
+		free(busV2.contentV2);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
