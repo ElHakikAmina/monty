@@ -49,14 +49,14 @@ typedef struct stack_sV2
 ```
 ```
 /**
- * struct instruction_s - opcode and its function
+ * struct instruction_sV2 - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO
  */
-typedef struct instruction_s
+typedef struct instruction_sV2
 {
         char *opcode;
         void (*f)(stack_tV2 **stack, unsigned int line_number);
