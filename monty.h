@@ -55,7 +55,7 @@ char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *contentV2);
 void f_push(stack_tV2 **head, unsigned int number);
-void f_pall(stack_tV2 **head, unsigned int number);
+void f_pallV2(stack_tV2 **head, unsigned int number);
 void f_pintV2(stack_tV2 **head, unsigned int number);
 int execute(char *contentV2, stack_tV2 **head, unsigned int counter, FILE *file);
 void free_stackV2(stack_tV2 *head);
