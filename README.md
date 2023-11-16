@@ -45,7 +45,7 @@ typedef struct stack_sV2
         int n;
         struct stack_sV2 *prev;
         struct stack_sV2 *next;
-} stack_t;
+} stack_tV2;
 ```
 ```
 /**
@@ -59,7 +59,7 @@ typedef struct stack_sV2
 typedef struct instruction_s
 {
         char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+        void (*f)(stack_tV2 **stack, unsigned int line_number);
 } instruction_t;
 ```
 

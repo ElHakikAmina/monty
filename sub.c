@@ -5,9 +5,9 @@
   *@counter: line_number
   *Return: no return
  */
-void f_sub(stack_t **head, unsigned int counter)
+void f_sub(stack_tV2 **head, unsigned int counter)
 {
-	stack_t *aux;
+	stack_tV2 *aux;
 	int sus, nodes;
 
 	aux = *head;

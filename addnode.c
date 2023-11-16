@@ -5,13 +5,13 @@
  * @n: new_value
  * Return: no return
 */
-void addnode(stack_t **head, int n)
+void addnode(stack_tV2 **head, int n)
 {
 
-	stack_t *new_node, *aux;
+	stack_tV2 *new_node, *aux;
 
 	aux = *head;
-	new_node = malloc(sizeof(stack_t));
+	new_node = malloc(sizeof(stack_tV2));
 	if (new_node == NULL)
 	{ printf("Error\n");
 		exit(0); }

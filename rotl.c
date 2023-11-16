@@ -5,9 +5,9 @@
   *@counter: line_number
   *Return: no return
  */
-void f_rotl(stack_t **head,  __attribute__((unused)) unsigned int counter)
+void f_rotl(stack_tV2 **head,  __attribute__((unused)) unsigned int counter)
 {
-	stack_t *tmp = *head, *aux;
+	stack_tV2 *tmp = *head, *aux;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{

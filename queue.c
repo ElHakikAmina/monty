@@ -5,7 +5,7 @@
  * @counter: line_number
  * Return: no return
 */
-void f_queue(stack_t **head, unsigned int counter)
+void f_queue(stack_tV2 **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;
@@ -18,12 +18,12 @@ void f_queue(stack_t **head, unsigned int counter)
  * @head: head of the stack
  * Return: no return
 */
-void addqueue(stack_t **head, int n)
+void addqueue(stack_tV2 **head, int n)
 {
-	stack_t *new_node, *aux;
+	stack_tV2 *new_node, *aux;
 
 	aux = *head;
-	new_node = malloc(sizeof(stack_t));
+	new_node = malloc(sizeof(stack_tV2));
 	if (new_node == NULL)
 	{
 		printf("Error\n");

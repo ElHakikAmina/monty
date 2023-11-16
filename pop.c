@@ -5,9 +5,9 @@
  * @counter: line_number
  * Return: no return
 */
-void f_pop(stack_t **head, unsigned int counter)
+void f_pop(stack_tV2 **head, unsigned int counter)
 {
-	stack_t *h;
+	stack_tV2 *h;
 
 	if (*head == NULL)
 	{
