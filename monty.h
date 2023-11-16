@@ -1,78 +1,78 @@
-#ifndef MOnTY_H
-#define MOnTY_H
+#ifndef MONTY_H
+#define MONTY_H
+
+#define _GNU_SOURCE
 #include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
 #include <unistd.h>
-#include <fcntl.h>
 #include <string.h>
+#include <stdlib.h>
 #include <ctype.h>
+#include <stdarg.h>
+
 /**
- * struct stack_sV2 - doubly linked list representation of a stack (or queue)
- * @n: integer
- * @prevV2: points to the prevV2ious element of the stack (or queue)
- * @nextV2: points to the nextV2 element of the stack (or queue)
+ * struct stack_s - dbly linkd list
+ * @n: int input
+ * @prev: ptr to prev elmt
+ * @next: ptr to nxt elmt
  *
- * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO Holberton project
- */
-typedef struct stack_sV2
+ * Description: dbly linkd list
+*/
+typedef struct stack_s
 {
 	int n;
-	struct stack_sV2 *prevV2;
-	struct stack_sV2 *nextV2;
-} stack_tV2;
+	struct stack_s *prev;
+	struct stack_s *next;
+} stack_t;
+
 /**
- * struct busV2_sV2 - variables -args, file, line contentV2
- * @arg: value
- * @file: pointer to monty file
- * @contentV2: line contentV2
- * @lifi: flag change stack <-> queue
- * Description: carries values through the program
- */
-typedef struct busV2_sV2
-{
-	char *arg;
-	FILE *file;
-	char *contentV2;
-	int lifi;
-}  busV2_tV2;
-extern busV2_tV2 busV2;
-/**
- * struct instruction_sV2 - opcodeV2 and its function
- * @opcodeV2: the opcodeV2
- * @f: function to handle the opcodeV2
+ * struct instruction_s - opcode's function
+ * @opcode: opcode
+ * @f: func that handles the opcode
  *
- * Description: opcodeV2 and its function
- * for stack, queues, LIFO, FIFO Holberton project
- */
-typedef struct instruction_sV2
+ * Description: opcode's func
+*/
+typedef struct instruction_s
 {
-	char *opcodeV2;
-	void (*f)(stack_tV2 **stack, unsigned int line_numberV2);
-} instruction_tV2;
-char *_realloc(char *ptr, unsigned int old_sizeV2, unsigned int new_sizeV2);
-ssize_t getstdin(char **lineptrV2, int file);
-char  *clean_line(char *contentV2);
-void f_pushV2(stack_tV2 **headV2, unsigned int numberV2);
-void f_pallV2(stack_tV2 **headV2, unsigned int numberV2);
-void f_pintV2(stack_tV2 **headV2, unsigned int numberV2);
-int executeV2(char *contentV2, stack_tV2 **headV2, unsigned int counterV2, FILE *file);
-void free_stackV2(stack_tV2 *headV2);
-void f_popV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_swapV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_addV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_nopV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_subV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_divV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_mulV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_modV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_pcharV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_pstrV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_rotlV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_rotrV2(stack_tV2 **headV2, __attribute__((unused)) unsigned int counterV2);
-void addnodeV2(stack_tV2 **headV2, int n);
-void addqueueV2(stack_tV2 **headV2, int n);
-void f_queueV2(stack_tV2 **headV2, unsigned int counterV2);
-void f_stackV2(stack_tV2 **headV2, unsigned int counterV2);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int l_num);
+} instruction_t;
+
+extern stack_t *head;
+typedef void (*op_func)(stack_t **, unsigned int);
+
+void openf(char *file_name);
+int parsel(char *buffer, int l_num, int fo);
+void readf(FILE *);
+int lenCh(FILE *);
+void findFc(char *, char *, int, int);
+
+stack_t *createN(int n);
+void freeN(void);
+void printS(stack_t **, unsigned int);
+void add2S(stack_t **, unsigned int);
+void add2Q(stack_t **, unsigned int);
+
+void callF(op_func, char *, char *, int, int);
+
+void printT(stack_t **, unsigned int);
+void popT(stack_t **, unsigned int);
+void nP(stack_t **, unsigned int);
+void swapN(stack_t **, unsigned int);
+
+void addNd(stack_t **, unsigned int);
+void subNd(stack_t **, unsigned int);
+void divNd(stack_t **, unsigned int);
+void mulNd(stack_t **, unsigned int);
+void modNd(stack_t **, unsigned int);
+
+void printCh(stack_t **, unsigned int);
+void printSt(stack_t **, unsigned int);
+void rT(stack_t **, unsigned int);
+
+void eR(int errCd, ...);
+void moreR(int errCd, ...);
+void stringR(int errCd, ...);
+void rTr(stack_t **, unsigned int);
+
 #endif
+

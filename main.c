@@ -1,45 +1,86 @@
 #include "monty.h"
-busV2_tV2 busV2 = {nULL, nULL, nULL, 0};
+
+stack_t *head = NULL;
+
 /**
-* main - monty code interpreter
-* @argc: numberV2 of arguments
-* @argv: monty file location
-* Return: 0 on success
+ * main - entry point
+ * @argc: num of args
+ * @argv: list of args
+ *
+ * Return: 0
 */
+
 int main(int argc, char *argv[])
 {
-	char *contentV2;
-	FILE *file;
-	size_t size = 0;
-	ssize_t read_line = 1;
-	stack_tV2 *stack = nULL;
-	unsigned int counterV2 = 0;
-
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	file = fopen(argv[1], "r");
-	busV2.file = file;
-	if (!file)
-	{
-		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
+	openf(argv[1]);
+	freeN();
+	return (0);
+}
+
+/**
+ * add2Q - Adds a nd 2 d q
+ * @n_nd: Ptr 2 d new nd
+ * @len: line num of d opcode
+*/
+
+void add2Q(stack_t **n_nd, __attribute__((unused))unsigned int len)
+{
+	stack_t *t;
+
+	if (n_nd == NULL || *n_nd == NULL)
 		exit(EXIT_FAILURE);
-	}
-	while (read_line > 0)
+	if (head == NULL)
 	{
-		contentV2 = nULL;
-		read_line = getline(&contentV2, &size, file);
-		busV2.contentV2 = contentV2;
-		counterV2++;
-		if (read_line > 0)
-		{
-			executeV2(contentV2, &stack, counterV2, file);
-		}
-		free(contentV2);
+		head = *n_nd;
+		return;
 	}
-	free_stackV2(stack);
-	fclose(file);
-return (0);
+	t = head;
+	while (t->next != NULL)
+		t = t->next;
+
+	t->next = *n_nd;
+	(*n_nd)->prev = t;
+
+}
+
+/**
+ * createN - Node creation
+ * @nmt: Number to go inside the node
+ *
+ * Return: ptr to d node (Succes), NULL otherwise
+*/
+stack_t *createN(int nmt)
+{
+	stack_t *nd;
+
+	nd = malloc(sizeof(stack_t));
+	if (nd == NULL)
+		eR(4);
+	nd->next = NULL;
+	nd->prev = NULL;
+	nd->n = nmt;
+	return (nd);
+}
+
+/**
+ * freeN - Frees all nds
+*/
+
+void freeN(void)
+{
+	stack_t *t;
+
+	if (head == NULL)
+		return;
+	while (head != NULL)
+	{
+		t = head;
+		head = head->next;
+		free(t);
+	}
 }
