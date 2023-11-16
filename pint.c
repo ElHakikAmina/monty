@@ -1,11 +1,11 @@
 #include "monty.h"
 /**
- * f_pint - prints the top
+ * f_pintV2 - prints the top
  * @head: stack head
  * @counter: line_number
  * Return: no return
 */
-void f_pint(stack_tV2 **head, unsigned int counter)
+void f_pintV2(stack_tV2 **head, unsigned int counter)
 {
 	if (*head == NULL)
 	{
