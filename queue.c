@@ -38,11 +38,11 @@ void addqueue(stack_tV2 **head, int n)
 	if (!aux)
 	{
 		*head = new_node;
-		new_node->prev = NULL;
+		new_node->prevV2 = NULL;
 	}
 	else
 	{
 		aux->next = new_node;
-		new_node->prev = aux;
+		new_node->prevV2 = aux;
 	}
 }

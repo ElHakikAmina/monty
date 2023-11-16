@@ -34,7 +34,7 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 /**
  * struct stack_sV2 - doubly linked list representation of a stack (or queue)
  * @n: integer
- * @prev: points to the previous element of the stack (or queue)
+ * @prevV2: points to the prevV2ious element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
  *
  * Description: doubly linked list node structure
@@ -43,7 +43,7 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 typedef struct stack_sV2
 {
         int n;
-        struct stack_sV2 *prev;
+        struct stack_sV2 *prevV2;
         struct stack_sV2 *next;
 } stack_tV2;
 ```

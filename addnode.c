@@ -16,9 +16,9 @@ void addnode(stack_tV2 **head, int n)
 	{ printf("Error\n");
 		exit(0); }
 	if (aux)
-		aux->prev = new_node;
+		aux->prevV2 = new_node;
 	new_node->n = n;
 	new_node->next = *head;
-	new_node->prev = NULL;
+	new_node->prevV2 = NULL;
 	*head = new_node;
 }

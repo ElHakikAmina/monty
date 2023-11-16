@@ -14,13 +14,13 @@ void f_rotl(stack_tV2 **head,  __attribute__((unused)) unsigned int counter)
 		return;
 	}
 	aux = (*head)->next;
-	aux->prev = NULL;
+	aux->prevV2 = NULL;
 	while (tmp->next != NULL)
 	{
 		tmp = tmp->next;
 	}
 	tmp->next = *head;
 	(*head)->next = NULL;
-	(*head)->prev = tmp;
+	(*head)->prevV2 = tmp;
 	(*head) = aux;
 }

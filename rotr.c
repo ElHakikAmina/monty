@@ -19,8 +19,8 @@ void f_rotr(stack_tV2 **head, __attribute__((unused)) unsigned int counter)
 		copy = copy->next;
 	}
 	copy->next = *head;
-	copy->prev->next = NULL;
-	copy->prev = NULL;
-	(*head)->prev = copy;
+	copy->prevV2->next = NULL;
+	copy->prevV2 = NULL;
+	(*head)->prevV2 = copy;
 	(*head) = copy;
 }
