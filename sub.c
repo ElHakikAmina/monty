@@ -18,7 +18,7 @@ void f_subV2(stack_tV2 **head, unsigned int counter)
 		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
 		fclose(busV2.file);
 		free(busV2.contentV2);
-		free_stack(*head);
+		free_stackV2(*head);
 		exit(EXIT_FAILURE);
 	}
 	aux = *head;

@@ -21,13 +21,13 @@ void f_push(stack_tV2 **head, unsigned int counter)
 		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
 			fclose(busV2.file);
 			free(busV2.contentV2);
-			free_stack(*head);
+			free_stackV2(*head);
 			exit(EXIT_FAILURE); }}
 	else
 	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
 		fclose(busV2.file);
 		free(busV2.contentV2);
-		free_stack(*head);
+		free_stackV2(*head);
 		exit(EXIT_FAILURE); }
 	n = atoi(busV2.arg);
 	if (busV2.lifi == 0)

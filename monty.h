@@ -58,7 +58,7 @@ void f_push(stack_tV2 **head, unsigned int number);
 void f_pall(stack_tV2 **head, unsigned int number);
 void f_pint(stack_tV2 **head, unsigned int number);
 int execute(char *contentV2, stack_tV2 **head, unsigned int counter, FILE *file);
-void free_stack(stack_tV2 *head);
+void free_stackV2(stack_tV2 *head);
 void f_popV2(stack_tV2 **head, unsigned int counter);
 void f_swapV2(stack_tV2 **head, unsigned int counter);
 void f_addV2(stack_tV2 **head, unsigned int counter);
