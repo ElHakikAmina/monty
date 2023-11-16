@@ -52,7 +52,7 @@ typedef struct instruction_sV2
 	void (*f)(stack_tV2 **stack, unsigned int line_numberV2);
 } instruction_tV2;
 char *_realloc(char *ptr, unsigned int old_sizeV2, unsigned int new_sizeV2);
-ssize_t getstdin(char **lineptr, int file);
+ssize_t getstdin(char **lineptrV2, int file);
 char  *clean_line(char *contentV2);
 void f_pushV2(stack_tV2 **headV2, unsigned int numberV2);
 void f_pallV2(stack_tV2 **headV2, unsigned int numberV2);
