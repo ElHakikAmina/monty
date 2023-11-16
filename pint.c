@@ -11,7 +11,7 @@ void f_pint(stack_tV2 **head, unsigned int counter)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", counter);
 		fclose(bus.file);
-		free(bus.content);
+		free(bus.contentV2);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

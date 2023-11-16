@@ -20,7 +20,7 @@ void f_div(stack_tV2 **head, unsigned int counter)
 	{
 		fprintf(stderr, "L%d: can't div, stack too short\n", counter);
 		fclose(bus.file);
-		free(bus.content);
+		free(bus.contentV2);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
@@ -29,7 +29,7 @@ void f_div(stack_tV2 **head, unsigned int counter)
 	{
 		fprintf(stderr, "L%d: division by zero\n", counter);
 		fclose(bus.file);
-		free(bus.content);
+		free(bus.contentV2);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

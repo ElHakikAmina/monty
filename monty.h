@@ -23,10 +23,10 @@ typedef struct stack_sV2
 	struct stack_sV2 *next;
 } stack_tV2;
 /**
- * struct bus_sV2 - variables -args, file, line content
+ * struct bus_sV2 - variables -args, file, line contentV2
  * @arg: value
  * @file: pointer to monty file
- * @content: line content
+ * @contentV2: line contentV2
  * @lifi: flag change stack <-> queue
  * Description: carries values through the program
  */
@@ -34,7 +34,7 @@ typedef struct bus_sV2
 {
 	char *arg;
 	FILE *file;
-	char *content;
+	char *contentV2;
 	int lifi;
 }  bus_tV2;
 extern bus_tV2 bus;
@@ -53,11 +53,11 @@ typedef struct instruction_sV2
 } instruction_tV2;
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
-char  *clean_line(char *content);
+char  *clean_line(char *contentV2);
 void f_push(stack_tV2 **head, unsigned int number);
 void f_pall(stack_tV2 **head, unsigned int number);
 void f_pint(stack_tV2 **head, unsigned int number);
-int execute(char *content, stack_tV2 **head, unsigned int counter, FILE *file);
+int execute(char *contentV2, stack_tV2 **head, unsigned int counter, FILE *file);
 void free_stack(stack_tV2 *head);
 void f_pop(stack_tV2 **head, unsigned int counter);
 void f_swap(stack_tV2 **head, unsigned int counter);
