@@ -31,7 +31,7 @@ void f_push(stack_tV2 **head, unsigned int counter)
 		exit(EXIT_FAILURE); }
 	n = atoi(busV2.arg);
 	if (busV2.lifi == 0)
-		addnode(head, n);
+		addnodeV2(head, n);
 	else
-		addqueue(head, n);
+		addqueueV2(head, n);
 }

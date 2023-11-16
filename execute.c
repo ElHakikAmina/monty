@@ -22,8 +22,8 @@ int execute(char *contentV2, stack_tV2 **stack, unsigned int counter, FILE *file
 				{"pchar", f_pchar},
 				{"pstr", f_pstr},
 				{"rotl", f_rotl},
-				{"rotr", f_rotr},
-				{"queue", f_queue},
+				{"rotr", f_rotrV2},
+				{"queue", f_queueV2},
 				{"stack", f_stackV2},
 				{NULL, NULL}
 				};

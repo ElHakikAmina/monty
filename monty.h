@@ -70,9 +70,9 @@ void f_mod(stack_tV2 **head, unsigned int counter);
 void f_pchar(stack_tV2 **head, unsigned int counter);
 void f_pstr(stack_tV2 **head, unsigned int counter);
 void f_rotl(stack_tV2 **head, unsigned int counter);
-void f_rotr(stack_tV2 **head, __attribute__((unused)) unsigned int counter);
-void addnode(stack_tV2 **head, int n);
-void addqueue(stack_tV2 **head, int n);
-void f_queue(stack_tV2 **head, unsigned int counter);
+void f_rotrV2(stack_tV2 **head, __attribute__((unused)) unsigned int counter);
+void addnodeV2(stack_tV2 **head, int n);
+void addqueueV2(stack_tV2 **head, int n);
+void f_queueV2(stack_tV2 **head, unsigned int counter);
 void f_stackV2(stack_tV2 **head, unsigned int counter);
 #endif
