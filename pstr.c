@@ -2,16 +2,16 @@
 /**
  * f_pstrV2 - prints the string starting at the top of the stack,
  * followed by a new
- * @head: stack head
+ * @headV2: stack headV2
  * @counterV2: line_number
  * Return: no return
 */
-void f_pstrV2(stack_tV2 **head, unsigned int counterV2)
+void f_pstrV2(stack_tV2 **headV2, unsigned int counterV2)
 {
 	stack_tV2 *h;
 	(void)counterV2;
 
-	h = *head;
+	h = *headV2;
 	while (h)
 	{
 		if (h->n > 127 || h->n <= 0)

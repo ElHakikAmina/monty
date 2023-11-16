@@ -25,11 +25,11 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 * Maximum of one global variable is allowed
 * No more than 5 functions per file
 * The C standard library is allowed
-* The prototypes of all the functions were included in the header file called monty.h
-* All the header files are include guarded
+* The prototypes of all the functions were included in the headV2er file called monty.h
+* All the headV2er files are include guarded
 
 ## Instruction given:
-* To use the following data structures for this project, and to also include them in the header file.
+* To use the following data structures for this project, and to also include them in the headV2er file.
 ```
 /**
  * struct stack_sV2 - doubly linked list representation of a stack (or queue)

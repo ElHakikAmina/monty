@@ -2,16 +2,16 @@
 /**
  * f_modV2 - computes the rest of the division of the second
  * top element of the stack by the top element of the stack
- * @head: stack head
+ * @headV2: stack headV2
  * @counterV2: line_number
  * Return: no return
 */
-void f_modV2(stack_tV2 **head, unsigned int counterV2)
+void f_modV2(stack_tV2 **headV2, unsigned int counterV2)
 {
 	stack_tV2 *h;
 	int len = 0, aux;
 
-	h = *head;
+	h = *headV2;
 	while (h)
 	{
 		h = h->nextV2;
@@ -22,20 +22,20 @@ void f_modV2(stack_tV2 **head, unsigned int counterV2)
 		fprintf(stderr, "L%d: can't mod, stack too short\n", counterV2);
 		fclose(busV2.file);
 		free(busV2.contentV2);
-		free_stackV2(*head);
+		free_stackV2(*headV2);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
+	h = *headV2;
 	if (h->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", counterV2);
 		fclose(busV2.file);
 		free(busV2.contentV2);
-		free_stackV2(*head);
+		free_stackV2(*headV2);
 		exit(EXIT_FAILURE);
 	}
 	aux = h->nextV2->n % h->n;
 	h->nextV2->n = aux;
-	*head = h->nextV2;
+	*headV2 = h->nextV2;
 	free(h);
 }

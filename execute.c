@@ -1,7 +1,7 @@
 #include "monty.h"
 /**
 * execute - executes the opcode
-* @stack: head linked list - stack
+* @stack: headV2 linked list - stack
 * @counterV2: line_counterV2
 * @file: poiner to monty file
 * @contentV2: line contentV2

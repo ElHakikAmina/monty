@@ -1,16 +1,16 @@
 #include "monty.h"
 /**
  * f_pallV2 - prints the stack
- * @head: stack head
+ * @headV2: stack headV2
  * @counterV2: no used
  * Return: no return
 */
-void f_pallV2(stack_tV2 **head, unsigned int counterV2)
+void f_pallV2(stack_tV2 **headV2, unsigned int counterV2)
 {
 	stack_tV2 *h;
 	(void)counterV2;
 
-	h = *head;
+	h = *headV2;
 	if (h == NULL)
 		return;
 	while (h)

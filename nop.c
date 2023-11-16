@@ -1,12 +1,12 @@
 #include "monty.h"
 /**
   *f_nopV2- nothing
-  *@head: stack head
+  *@headV2: stack headV2
   *@counterV2: line_number
   *Return: no return
  */
-void f_nopV2(stack_tV2 **head, unsigned int counterV2)
+void f_nopV2(stack_tV2 **headV2, unsigned int counterV2)
 {
 	(void) counterV2;
-	(void) head;
+	(void) headV2;
 }
