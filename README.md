@@ -60,7 +60,7 @@ typedef struct instruction_sV2
 {
         char *opcode;
         void (*f)(stack_tV2 **stack, unsigned int line_number);
-} instruction_t;
+} instruction_tV2;
 ```
 
 ## List of files/Descriptions:
